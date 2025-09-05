@@ -5,6 +5,7 @@ import PageHeader from "@/components/common/PageHeader.astro";
 import { markdownify } from "@lib/textConverter";
 import { FaGithub } from "react-icons/fa";
 import Image from "astro/components/Image.astro";
+import ChatImage from "src/assets/Chatgptimage.png";
 
 interface Props {
   entry: PortfolioEntry;
@@ -22,7 +23,7 @@ const { title, description, projects } = entry.data;
     <div class="row justify-center">
       <div class="col-10 content glass rounded-lg p-4">
         <Image
-          src="https://sdmntprwestus.oaiusercontent.com/files/00000000-fb48-6230-9f22-4b75080b7f40/raw?se=2025-09-05T00%3A31%3A30Z&sp=r&sv=2024-08-04&sr=b&scid=4db2f949-6bdc-579d-b073-789e141a0ae1&skoid=789f404f-91a9-4b2f-932c-c44965c11d82&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-04T19%3A01%3A45Z&ske=2025-09-05T19%3A01%3A45Z&sks=b&skv=2024-08-04&sig=LISjWiZ3qntM8AdYzVeRJNIOy0x2dsDaHFh12jf5lLw%3D"
+          src={ChatImage}
           alt="How It Works"
           width="500"
           height="500"
