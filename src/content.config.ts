@@ -115,22 +115,32 @@ const poetry = defineCollection({
     }),
 });
 
+// src/content/config.ts
+import { defineCollection, z } from "astro:content";
+
 const portfolio = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/portfolio",
-  }),
-  schema: searchable.extend({
-    projects: z.array(
-      z.object({
-        title: z.string(),
-        github: z.string().optional(),
-        technologies: z.array(z.string()).optional(),
-        content: z.array(z.string()).optional(),
-      }),
-    ),
+  type: "content",
+  schema: z.object({
+    // Title can now be optional
+    title: z.string().optional(),
+    // Description optional too if you don't always want it
+    description: z.string().optional(),
+    // Projects optional; if present, must be an array of objects
+    projects: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string().optional(),
+          href: z.string().url().optional(), // or `url` if that's what you're using
+          image: z.string().optional(),
+        })
+      )
+      .optional(),
   }),
 });
+
+export const collections = { portfolio };
+
 
 const recipes = defineCollection({
   loader: glob({
