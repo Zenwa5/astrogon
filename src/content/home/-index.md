@@ -2,8 +2,8 @@
 image: "@assets/astrogon-star.svg"
 imageAlt: Astrogon logo
 title: DON’T BE THE LAST ONE TO THE AI PARTY.
-content: Add a personalized chatbot to your business in minutes. 
+content: Get a personalized chatbot for your business in minutes. 
 button:
-  label: Get Early Access!
-  link: https://docs.google.com/forms/d/e/1FAIpQLSfEPLHW-5TtORB1TLz2LohGgB45kAP-kqy3NQT3o8k8pT0I4A/viewform?usp=header 
+  label: Get Started Today!
+  link: https://buy.stripe.com/6oU14n9aC77e1sW1bJ8AE00
 ---
